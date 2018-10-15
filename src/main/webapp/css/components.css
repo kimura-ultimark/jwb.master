@@ -1,0 +1,155 @@
+@charset "UTF-8";
+.panel-container {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.6);
+}
+.panel-container .panel {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	min-width: 320px;
+	background: #fff;
+	display: flex;
+	flex-direction: column;
+}
+.panel-container .panel .panel-header {
+	height: 40px;
+	background: #008f8f;
+	cursor: move;
+}
+.panel-container .panel .panel-header 
+.panel-title {
+	display: block;
+	line-height: 40px;
+	text-indent: 8px;
+	font-size: 16px;
+	color: white;
+}
+.panel-container .panel .panel-content {
+	flex-grow: 1;
+	padding: 8px;
+}
+.panel-container .panel .panel-footer {
+	padding: 8px;
+	text-align: right;
+}
+.signin-container {
+	height: 100%;
+	width: 100%;
+	background: url(img/text-logo-web-development-Java-development-brand-21835-wallhere.com.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.signin-container .signin-form {
+	height: 320px;
+	width: 300px;
+	background: rgba(0,0,0,.6);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	color: white;
+	padding: 16px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 8px;
+}
+.signin-container .signin-form 
+.signin-title {
+	height: 32px;
+	line-height: 32px;
+}
+.signin-container .signin-form 
+.signin-input {
+	padding: 24px 0px;
+}
+.signin-container .signin-form 
+.signin-input .textfield {
+	display: flex;
+	padding: 8px 0px;
+}
+.signin-container .signin-form 
+.signin-input .textfield 
+.textfield-label {
+	height: 32px;
+	width: 32px;
+	line-height: 32px;
+}
+.signin-container .signin-form 
+.signin-input .textfield 
+.textfield-label .material-icons {
+	vertical-align: middle;
+}
+.signin-container .signin-form 
+.signin-input .textfield 
+.textfield-input {
+	height: 32px;
+	line-height: 32px;
+	flex-grow: 1;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 1px solid white;
+	color: inherit;
+	font-size: inherit;
+}
+.signin-container .signin-form 
+.signin-action {
+	flex-grow: 1;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: flex-end;
+}
+.signin-container .signin-form 
+.signin-action .btn {
+	height: 36px;
+	width: auto;
+	line-height: 36px;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+	box-shadow: 0 2px 8px 0 rgba(0,0,0,.2),
+				0 2px 2px -2px rgba(0,0,0,.4);
+	cursor: pointer;
+	padding: 0px 16px;
+	position: relative;
+	overflow: hidden;
+}
+.signin-container .signin-form 
+.signin-action .btn .ripple {
+	position: absolute;
+	border-radius: 50%;
+	transform: scale(0);
+	background: rgba(255,255,255,.6);
+	animation: rippleEffect linear .5s;
+}
+@keyframes rippleEffect {
+	to {
+		transform: scale(2.5);
+		opacity: 0;
+	}
+}
+.signin-container .signin-form 
+.signin-action .link {
+	cursor: pointer;
+}
+.feedbackPanel {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.signin-container .signin-form 
+.signin-action .btn.accent {
+	background: crimson;
+	color: white;
+}
+.signin-container .signin-form 
+.signin-action .btn .material-icons {
+	vertical-align: middle;
+}

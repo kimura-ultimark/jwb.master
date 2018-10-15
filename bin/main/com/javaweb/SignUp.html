@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="css/style.css" />
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+	<script type="text/javascript" src="js/style.js"></script>
+	<title>サインアップ</title>
+</head>
+<body class="blue-grey darken-4">
+	<div class="signin-container">
+		<form wicket:id="signup-form">
+			<div class="signin-form">
+				<span class="signin-title">サインアップ</span>
+				<div class="signin-input">
+					<div class="textfield">
+						<label class="textfield-label">
+							<i class="material-icons">mail_outline</i>
+						</label>
+						<input wicket:id="email" type="email" class="textfield-input" required/>
+					</div>
+					<div class="textfield">
+						<label class="textfield-label">
+							<i class="material-icons">lock</i>
+						</label>
+						<input wicket:id="password" type="password" class="textfield-input" />
+					</div>
+					<div class="textfield">
+						<label class="textfield-label">
+							<i class="material-icons">lock</i>
+						</label>
+						<input wicket:id="passwordConfirm" type="password" class="textfield-input" />
+					</div>
+				</div>
+				<div class="signin-action">
+					<button class="btn accent">
+						<i class="material-icons">person_add</i>
+						<span>サインアップ</span>
+					</button>
+				</div>
+			</div>
+		</form>
+		<div wicket:id="feedbackPanel"></div>
+	</div>
+</body>
+</html>

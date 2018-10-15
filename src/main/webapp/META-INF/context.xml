@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context path="/javaweb" reloadable="true" docBase="D:\JWB\javaweb\src\main\webapp">
+<!-- Extra info begin -->
+<Resource	name="jdbc/awg"
+			auth="Container" type="javax.sql.DataSource"
+			maxActive="150" maxIdle="50" maxWait="15000"
+			username="jwbuser" password="EqI`Iay6" driverClassName="com.mysql.cj.jdbc.Driver"
+			url="jdbc:mysql://192.168.1.15:3306/awgdb?characterEncoding=UTF-8&amp;serverTimezone=JST&amp;autoReconnect=true&amp;useSSL=false"/>
+<!-- Extra info end -->
+</Context>
