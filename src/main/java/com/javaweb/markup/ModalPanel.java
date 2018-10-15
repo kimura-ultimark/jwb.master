@@ -8,6 +8,7 @@ import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.markup.html.panel.Panel;
 import org.apache.wicket.model.Model;
 
+
 public class ModalPanel extends Panel {
 
 	private static final long serialVersionUID = -4132594959168509154L;

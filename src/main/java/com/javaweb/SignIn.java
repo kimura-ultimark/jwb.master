@@ -33,8 +33,10 @@ public class SignIn extends WebPage {
 			
 			@Override
 			public void onSubmit() {
+				// メールアドレス、パスワード取得
 				String emailAddress = emailField.getModelObject();
 				String password = passwordField.getModelObject();
+				// サインイン処理
 				UserReception userReception = new UserManager();
 				IUser user = userReception.signIn(emailAddress, password);
 				if (!user.isAuthenticated()) {
