@@ -9,12 +9,7 @@ import com.javaweb.common.database.Database;
 import com.javaweb.security.Cipher;
 
 public class UserManager implements UserReception {
-
-	@Override
-	public void signUp(IUser newUser) {
-		
-	}
-
+	
 	@Override
 	public IUser signIn(String emailAddress, String password) {
 		// パスワードのハッシュ化
@@ -39,5 +34,11 @@ public class UserManager implements UserReception {
 			e.printStackTrace();
 		}
 		return user;
+	}
+
+	@Override
+	public IUser SignUp(ApplicationForm applicationForm) throws UserNotRegisteredException {
+		
+		return null;
 	}
 }
