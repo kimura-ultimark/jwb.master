@@ -28,9 +28,6 @@ dependencies {
 	// https://mvnrepository.com/artifact/mysql/mysql-connector-java
 	compile group: 'mysql', name: 'mysql-connector-java', version: '8.0.12'
 	
-	// https://mvnrepository.com/artifact/org.apache.wicket/wicket-extensions
-	compile group: 'org.apache.wicket', name: 'wicket-extensions', version: '8.1.0'
-	
 	// https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api
 	compileOnly group: 'javax.servlet', name: 'javax.servlet-api', version: '4.0.1'
 	

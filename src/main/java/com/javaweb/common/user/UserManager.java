@@ -37,8 +37,7 @@ public class UserManager implements UserReception {
 	}
 
 	@Override
-	public IUser SignUp(ApplicationForm applicationForm) throws UserNotRegisteredException {
+	public void SignUp(ApplicationForm applicationForm) throws UserNotRegisteredException {
 		
-		return null;
 	}
 }
