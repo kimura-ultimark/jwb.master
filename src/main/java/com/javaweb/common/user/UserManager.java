@@ -37,7 +37,38 @@ public class UserManager implements UserReception {
 	}
 
 	@Override
-	public void SignUp(ApplicationForm applicationForm) throws UserNotRegisteredException {
-		
+	public void SignUp(ApplicationForm applicationForm) 
+			throws UserNotRegisteredException {
+		// パスワードと確認用パスワードの比較
+		if (!applicationForm.password().equals(applicationForm.passwordConfirm())) {
+			throw new UserNotRegisteredException("パスワードが一致しません。");
+		}
+		// メールアドレスの存在チェック
+		Database database = new Database("jdbc/awg");
+		Connection conn = null;
+		try {
+			conn = database.connect();
+			PreparedStatement stmt = conn.prepareStatement("SELECT * FROM user WHERE email = ? ");
+			stmt.setString(1, applicationForm.emailAddress());
+			ResultSet rs = stmt.executeQuery();
+			if (rs.next()) {
+				throw new UserNotRegisteredException("メールアドレスは既に登録済です。");
+			}
+			rs.close();
+			stmt.close();
+			// パスワードのハッシュ化
+			Cipher cipher = new Cipher(applicationForm.emailAddress(), applicationForm.password());
+			String hashedPassword = cipher.hashedPassword();
+			// ユーザーテーブルに登録
+			PreparedStatement insStmt = conn.prepareStatement("INSERT INTO user (email, password) values (?, ?) ");
+			insStmt.setString(1, applicationForm.emailAddress());
+			insStmt.setString(2, hashedPassword);
+			insStmt.executeUpdate();
+			insStmt.close();
+			conn.commit();
+			conn.close();
+		} catch (SQLException e) {
+			throw new UserNotRegisteredException(e);
+		}
 	}
 }
