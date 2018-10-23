@@ -17,7 +17,6 @@
 .layout-title {
 	height: 64px;
 	width: 240px;
-	padding: 0px 8px;
 	display: flex;
 	align-items: center;
 }
@@ -68,7 +67,7 @@
 .layout-title {
 	height: 64px;
 	max-width: 240px;
-	padding: 0px 8px;
+	padding: 0px 16px;
 	display: none;
 	align-items: center;
 }
@@ -76,6 +75,7 @@
 	height: 100%;
 	width: auto;
 	padding: 4px 0px;
+	margin: 0 8px;
 }
 .layout-container .layout-body
 .layout-body__content {
