@@ -13,6 +13,27 @@
 	transition: .3s;
 	z-index: 9999;
 }
+.layout-container .layout-sidenav 
+.layout-content-list {
+	margin: 8px 0px;
+}
+.layout-container .layout-sidenav 
+.layout-content-list li a {
+	height: 40px;
+	width: 100%;
+	line-height: 40px;
+	display: flex;
+	align-items: center;
+	padding: 0px 24px;
+}
+.layout-container .layout-sidenav 
+.layout-content-list li a:hover {
+	background: #323232;
+}
+.layout-container .layout-sidenav 
+.layout-content-list li a i.material-icons {
+	margin-right: 24px;
+}
 .layout-container .layout-sidenav
 .layout-title {
 	height: 64px;
